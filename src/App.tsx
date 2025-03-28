@@ -142,7 +142,7 @@ function App() {
           <div className="flex-1 relative animate-fade-in">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white dark:border-gray-800 shadow-2xl hover:scale-105 transition-transform duration-300">
               <img
-                src="/media/IMG_20241105_085644_894.jpg"
+                src="https://i.postimg.cc/XJxDDpzr/IMG-20241105-085644-894.webp"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
