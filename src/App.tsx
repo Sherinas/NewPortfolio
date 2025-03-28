@@ -123,7 +123,7 @@ function App() {
             </p>
             <div className="flex gap-4">
               <a 
-                href="/media/Serinas14-3-25 (1).pdf"
+                href="https://cyan-nedda-20.tiiny.site"
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
                 download
               >
