@@ -323,8 +323,8 @@ function App() {
                 </div>
                 <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">
                   <Linkedin className="w-5 h-5 text-blue-500 animate-bounce" />
-                  <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-                    linkedin.com/in/yourusername
+                  <a href="https://www.linkedin.com/in/sherinas-muhammad-hussain-ba884a85" target="_blank" rel="noopener noreferrer">
+                    linkedin.com/in/Sherinas-muhammad-hussain
                   </a>
                 </div>
               </div>
