@@ -12,6 +12,50 @@ function App() {
     }
   }, [darkMode]);
 
+
+  // State for form data and submission status
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  // Handle form input changes
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus('submitting');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('https://formspree.io/f/xovenwkk', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setFormStatus('success');
+        setFormData({ name: '', email: '', message: '' }); // Reset form
+      } else {
+        const errorData = await response.json();
+        setFormStatus('error');
+        setErrorMessage(errorData.error || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      setFormStatus('error');
+      setErrorMessage('Network error. Please check your connection and try again.');
+    }
+  };
   const projects = [
     {
       title: "E-commerce Website",
@@ -330,39 +374,108 @@ function App() {
               </div>
             </div>
 
-            {/* Contact Form */}
-            <form className="space-y-6 transform hover:scale-105 transition-transform duration-300">
+{/* Contact Form */}
+<form
+              onSubmit={handleSubmit}
+              className="space-y-6 transform hover:scale-105 transition-transform duration-300 animate-fade-in-up"
+            >
               <div>
+                <label htmlFor="name" className="sr-only">
+                  Your Name
+                </label>
                 <input
+                  id="name"
                   type="text"
+                  name="name"
                   placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-blue-500 focus:outline-none dark:text-white transition-all duration-300"
                 />
               </div>
               <div>
+                <label htmlFor="email" className="sr-only">
+                  Your Email
+                </label>
                 <input
+                  id="email"
                   type="email"
+                  name="email"
                   placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-blue-500 focus:outline-none dark:text-white transition-all duration-300"
                 />
               </div>
               <div>
+                <label htmlFor="message" className="sr-only">
+                  Your Message
+                </label>
                 <textarea
+                  id="message"
+                  name="message"
                   placeholder="Your Message"
                   rows={5}
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-blue-500 focus:outline-none dark:text-white transition-all duration-300"
                 ></textarea>
               </div>
+              {formStatus === 'success' && (
+                <p className="text-green-500">Message sent successfully!</p>
+              )}
+              {formStatus === 'error' && (
+                <p className="text-red-500">{errorMessage}</p>
+              )}
               <button
                 type="submit"
-                className="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition-all duration-300 hover:scale-105"
+                disabled={formStatus === 'submitting'}
+                className={`bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition-all duration-300 hover:scale-105 flex items-center justify-center ${
+                  formStatus === 'submitting' ? 'opacity-50 cursor-not-allowed' : ''
+                }`}
               >
-                Send Message
+                {formStatus === 'submitting' ? (
+                  <>
+                    <svg
+                      className="animate-spin h-5 w-5 mr-2 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v8H4z"
+                      ></path>
+                    </svg>
+                    Sending...
+                  </>
+                ) : (
+                  'Send Message'
+                )}
               </button>
             </form>
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="py-6 bg-gray-100 dark:bg-gray-900 text-center">
+        <p className="text-gray-600 dark:text-gray-300">
+          © {new Date().getFullYear()} Sherinas. All rights reserved.
+        </p>
+      </footer>
     </div>
   );
 }
