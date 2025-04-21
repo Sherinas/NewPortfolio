@@ -59,19 +59,19 @@ function App() {
   const projects = [
     {
       title: "E-commerce Website",
-      description: "High-performance microservice framework built with Go, supporting gRPC and REST.",
+      description: "An E-commerce platform built with Go using the Gin framework and MVC architecture. Features include RESTful APIs, PostgreSQL integration, and Razorpay-based payment processing.",
       image: "https://qodemaker.com/wp-content/webp-express/webp-images/uploads/2022/10/eCommerce-Website-Components-photo.jpg.webp",
       demo: "https://demo.example.com/microservice",
       github: "https://github.com/Sherinas/MOUNT-GEAR",
-      tech: ["Go", "gRPC", "Docker", "Kubernetes"]
+      tech: ["Go", "GIN", "PostgreSQL", "Razorpay", "REST API"]
     },
     {
-      title: "Real-time Chat System",
-      description: "Scalable WebSocket-based chat system using Go and Redis.",
+      title: "Enterprise Real-time Chat System",
+      description: "A scalable enterprise-grade real-time chat application built with Go, tailored for internal company communication. Features include one-to-one and group chats, real-time notifications, admin-controlled user and permission management, and support for text, image, document, and voice messaging. The system uses Gin for routing, PostgreSQL for data storage, Redis Pub/Sub for message broadcasting, and AWS S3 for media storage.",
       image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800",
       demo: "https://chat.example.com",
       github: "https://github.com/yourusername/chat",
-      tech: ["Go", "WebSocket", "Redis", "React"]
+      tech: ["Go", "GIN", "PostgreSQL", "Redis", "WebSocket", "AWS S3", "REST API"]
     },
     {
       title: "Data Pipeline",
