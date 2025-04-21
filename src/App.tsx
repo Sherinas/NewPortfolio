@@ -68,7 +68,7 @@ function App() {
     {
       title: "Enterprise Real-time Chat System",
       description: "A scalable enterprise-grade real-time chat application built with Go, tailored for internal company communication. Features include one-to-one and group chats, real-time notifications, admin-controlled user and permission management, and support for text, image, document, and voice messaging. The system uses Gin for routing, PostgreSQL for data storage, Redis Pub/Sub for message broadcasting, and AWS S3 for media storage.",
-      image: "https://ibb.co/XfRN9n28",
+      image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800",
       demo: "https://chat.example.com",
       github: "https://github.com/Sherinas/Chat-App",
       tech: ["Go", "GIN", "PostgreSQL", "Redis", "WebSocket", "AWS S3", "REST API"]
