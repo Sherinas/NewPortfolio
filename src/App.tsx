@@ -203,13 +203,13 @@ function App() {
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">About Me</h2>
           <div className="prose prose-lg dark:prose-invert mx-auto transform hover:scale-105 transition-transform duration-300">
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              As a dedicated Golang developer with over 5 years of experience, I've cultivated a deep passion for building scalable, high-performance systems that solve real-world problems. My journey in software development began during my university years, where I discovered my love for backend development and distributed systems. Since then, I've been fortunate to work with cutting-edge technologies and contribute to projects that serve millions of users.
+            With over 7 years in the IT industry, I've journeyed through various roles—from computer hardware technician to system administrator—gaining hands-on experience in Linux environments and server support. These roles ignited my curiosity and laid the foundation for my transition into software development.​
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-4">
-              My expertise lies in developing microservices architectures, implementing robust APIs, and optimizing system performance. I'm particularly interested in cloud-native development, containerization, and DevOps practices. Throughout my career, I've led teams in designing and implementing complex distributed systems, always focusing on writing clean, maintainable code that stands the test of time.
+            Initially, I viewed programming as an insurmountable challenge. However, my eagerness to learn propelled me to delve into coding, and I discovered a genuine passion for backend development. Over the past year, I've been learning and working with Golang, and it has resonated with me due to its efficiency and simplicity. I've since developed several applications using Go, continually honing my skills and embracing new technologies.​
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-4">
-              When I'm not coding, I'm actively involved in the Go community, contributing to open-source projects, and sharing knowledge through technical blogs and conferences. I believe in continuous learning and staying updated with the latest technological advancements in the field.
+            I'm deeply interested in cloud-native development, DevOps practices, and system design. My daily routine involves exploring these areas, experimenting with new tools, and building projects that enhance my understanding. I believe in the power of continuous learning and strive to stay updated with the latest advancements in technology.
             </p>
           </div>
         </div>
