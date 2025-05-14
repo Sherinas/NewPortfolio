@@ -69,7 +69,7 @@ function App() {
       title: "Enterprise Real-time Chat System",
       description: "A scalable enterprise-grade real-time chat application built with Go, tailored for internal company communication. Features include one-to-one and group chats, real-time notifications, admin-controlled user and permission management, and support for text, image, document, and voice messaging. The system uses Gin for routing, PostgreSQL for data storage, Redis Pub/Sub for message broadcasting, and AWS S3 for media storage.",
       image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800",
-      demo: "https://chat.example.com",
+      demo: "https://youtu.be/OZsarwb2uoo",
       github: "https://github.com/Sherinas/Chat-App",
       tech: ["Go", "GIN", "PostgreSQL", "Redis", "WebSocket", "AWS S3", "REST API"]
     },
@@ -78,7 +78,7 @@ function App() {
       description: "ETL pipeline processing system built with Go and Apache Kafka.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
       demo: "https://pipeline.example.com",
-      github: "https://github.com/yourusername/pipeline",
+      github: "https://github.com/Sherinas/fastlogi",
       tech: ["Go", "Kafka", "PostgreSQL", "Docker"]
     }
   ];
