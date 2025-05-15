@@ -84,11 +84,11 @@ function App() {
   ];
 
   const skills = {
-    languages: ["Go", "Python", "JavaScript", "SQL"],
+    languages: ["Go","C", "SQL"],
     frameworks: ["Gin", "Echo", "Fiber", "gRPC", "React"],
-    databases: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"],
+    databases: ["PostgreSQL", "MongoDB", "Redis",],
     tools: ["Docker", "Kubernetes", "AWS", "Git", "Linux"],
-    practices: ["Microservices", "CI/CD", "TDD", "Agile"]
+    practices: ["Microservices", "CI/CD",  "Agile"]
   };
 
   const education = [
