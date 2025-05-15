@@ -261,7 +261,7 @@ function App() {
                     <h4 className="text-xl font-bold text-gray-900 dark:text-white">{edu.degree}</h4>
                     <p className="text-gray-600 dark:text-gray-300">{edu.institution}</p>
                     <p className="text-blue-500">{edu.year}</p>
-                    <p className="text-gray-600 dark:text-gray-300 mt-2">{edu.description}</p>
+                    <p className="text-gray-600 dark:text-gray-300 mt-2">{}</p>
                   </div>
                 ))}
               </div>
